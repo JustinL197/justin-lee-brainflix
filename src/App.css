@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "AvenirNextTLPro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNextTLPro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "AvenirNextTLPro";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("opentype"), url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+.header__logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+}
+.header__logo {
+  max-width: 120px;
+  max-height: 25px;
+}
+.header__subcontainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+.header__search-icon {
+  position: absolute;
+  left: 10px;
+}
+.header__search {
+  width: 100%;
+  outline: none;
+  height: 36px;
+  padding: 12px 12px 12px 32px;
+  border: 1px solid;
+  border-color: #E1E1E1;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+}
+.header__search:focus {
+  border: 2px solid;
+  border-color: #0095FF;
+}
+.header__avatar {
+  display: flex;
+}
+.header__avatar-image {
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  width: 36px;
+  height: 36px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 10% center;
+     object-position: 10% center;
+}
+.header__upload-button {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  background-color: #0095FF;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+.header__upload-button:hover {
+  background-color: #0065AD;
+}
+.header__text {
+  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  font-family: "AvenirNextTLPro", sans-serif;
+}
