@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import VideoList from './components/VideoList/VideoList';
 import videoListJson from './data/videos.json';
 import videoDetailsJson from './data/video-details.json';
 import "./App.scss";
@@ -40,8 +41,9 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        {currentVideo && <videoPlayer video={currentVideo} />}
-        <VideoPlayer video={video} />
+        {currentVideo && <VideoPlayer video={currentVideo} />}
+        <VideoList videos={videoList} onVideoSelect={setVideoSelect} currentVideoId={currentVideo?.id}/>
+
       </main>
     </div>
   );

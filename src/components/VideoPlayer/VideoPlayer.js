@@ -4,14 +4,14 @@ import './VideoPlayer.scss';
 function VideoPlayer({video}){
     return (
         <div className="video-player">
-            <video className="video-player__video" controls poster={video.poster}>
+            <video className="video-player__video" controls poster={video.image}>
                 <source src={video.src} type="video/mp4"/>
             </video>
             <div className="video-player__details">
                 <h1 className="video-player__title">{video.title}</h1>
                 <div className="video-player__container">
                     <div className="video-player__subcontainer">
-                        <p className="video-player__author">{video.author}</p>
+                        <p className="video-player__author">{video.channel}</p>
                         <p className="video-player__date">{video.date}</p>
                     </div>
                     <div className="video-player__subcontainer">
