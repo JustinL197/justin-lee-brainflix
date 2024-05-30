@@ -8,11 +8,13 @@
 .video-player__title {
   margin: 0;
   font-size: 32px;
+  padding-bottom: 16px;
 }
 .video-player__container {
   display: flex;
   gap: 40px;
   align-items: center;
+  padding: 16px 0;
 }
 .video-player__subcontainer {
   display: flex;
@@ -53,4 +55,9 @@
 }
 .video-player__description {
   font-size: 18px;
+  margin-bottom: 0;
+}
+.video-player__divider {
+  border: none;
+  border-top: 1px solid #E1E1E1;
 }

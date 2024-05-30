@@ -3,7 +3,7 @@
 .video-list{
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 0 16px 16px 16px;
     gap: 16px;
 
     &__item{
@@ -26,7 +26,7 @@
     }
 
     &__title{
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 700;
         line-height: 20px;
         color: vars.$BrainFlix-Black;
@@ -35,10 +35,15 @@
     }
 
     &__channel{
-        font-size: 15px;
+        font-size: 18px;
         color: vars.$BrainFlix-Black;
         padding-bottom: 10px;
         margin: 0;
+    }
 
+    &__header{
+        color: vars.$Silver;
+        font-size: 18px;
+        margin: 0 0 16px 0;
     }
 }

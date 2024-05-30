@@ -1,5 +1,6 @@
 import React from 'react';
 import './VideoPlayer.scss';
+import Comments from '../Comments/Comments';
 import viewIcon from '../../assets/images/icons/views.svg';
 import likeIcon from '../../assets/images/icons/likes.svg';
 
@@ -33,6 +34,8 @@ function VideoPlayer({video}){
                 <hr className="video-player__divider"></hr>
                 <p className="video-player__description">{video.description}</p>
             </div>
+
+            <Comments comments={video.comments} />
         </div>
     )
 }
