@@ -25,24 +25,23 @@ function App() {
   useEffect(() => {
     const videos = fetchVideoList();
     setVideoList(videos);
-
+  
     if (videos.length > 0) {
       const video = fetchVideoDetails(videos[0].id);
       setCurrentVideo(video);
     }
   }, []);
 
-  const setVideoSelect = (videoId) => {
+  const setSelectedVideo = (videoId) => {
     const video = fetchVideoDetails(videoId);
     setCurrentVideo(video);
-  };
-
+  }  
   return (
     <div className="App">
       <Header />
       <main>
         {currentVideo && <VideoPlayer video={currentVideo} />}
-        <VideoList videos={videoList} onVideoSelect={setVideoSelect} currentVideoId={currentVideo?.id}/>
+        <VideoList videos={videoList} onVideoSelect={setSelectedVideo} currentVideoId={currentVideo?.id}/>
 
       </main>
     </div>

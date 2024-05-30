@@ -1,0 +1,44 @@
+@use '../../styles/partials/variables' as vars;
+
+.video-list{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+
+    &__item{
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+        gap: 16px;
+    }
+
+    &__image{
+        width: 150x;
+        height: 90px;
+        border-radius: 4px;
+    }
+
+    &__details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        color: vars.$BrainFlix-Black;
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    &__channel{
+        font-size: 15px;
+        color: vars.$BrainFlix-Black;
+        padding-bottom: 10px;
+        margin: 0;
+
+    }
+}

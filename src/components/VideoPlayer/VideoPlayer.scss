@@ -1,0 +1,73 @@
+@use '../../styles/partials/variables' as vars;
+
+.video-player{
+    &__video{
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
+    &__details{
+        padding: 0 16px 16px 16px;
+    }
+
+    &__title{
+        margin: 0;
+        font-size: 32px;
+    }
+
+    &__container{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    &__subcontainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__author{
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    &__date{
+        margin: 0;
+        color: vars.$Silver;
+        font-size: 18px;
+    }
+
+    &__views-container{
+        display: flex;
+    }
+
+    &__likes-container{
+        display: flex;
+    }
+
+    &__views{
+        margin: 0;
+        color: vars.$Silver;
+        font-size: 18px;
+    }
+
+    &__likes{
+        margin: 0;
+        color: vars.$Silver;
+        font-size: 18px;
+    }
+
+    &__viewIcon{
+        padding-right: 5px;
+    }
+
+    &__likeIcon{
+        padding-right: 5px;
+    }
+
+    &__description{
+        font-size: 18px;
+    }
+}
