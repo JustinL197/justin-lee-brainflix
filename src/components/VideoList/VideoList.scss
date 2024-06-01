@@ -1,10 +1,27 @@
 @use '../../styles/partials/variables' as vars;
+@use '../../styles/partials/mixins' as mixin;
 
 .video-list{
     display: flex;
     flex-direction: column;
-    padding: 0 16px 16px 16px;
+    padding: 0 vars.$padding-mobile vars.$padding-mobile vars.$padding-mobile;
     gap: 16px;
+
+    @include mixin.tablet{
+        padding: 0 vars.$padding-tablet vars.$padding-tablet vars.$padding-tablet;
+        gap: 36px;
+    }
+
+    &__header{
+        color: vars.$Silver;
+        font-size: vars.$fontsize-mobile;
+        margin: 0 0 16px 0;
+
+        @include mixin.tablet{
+            font-size: vars.$fontsize-tablet;
+            margin: 24px 0 0 0;
+        }
+    }
 
     &__item{
         display: flex;
@@ -17,6 +34,11 @@
         width: 150x;
         height: 90px;
         border-radius: 4px;
+
+        @include mixin.tablet{
+            width: 140px;
+            height: 80px;
+        }
     }
 
     &__details{
@@ -26,24 +48,28 @@
     }
 
     &__title{
-        font-size: 18px;
+        font-size: vars.$fontsize-mobile;
         font-weight: 700;
         line-height: 20px;
         color: vars.$BrainFlix-Black;
         padding-top: 10px;
         margin: 0;
+
+        @include mixin.tablet{
+            font-size: vars.$fontsize-tablet;
+            padding-top: 5px;
+        }
     }
 
     &__channel{
-        font-size: 18px;
+        font-size: vars.$fontsize-mobile;
         color: vars.$BrainFlix-Black;
         padding-bottom: 10px;
         margin: 0;
-    }
 
-    &__header{
-        color: vars.$Silver;
-        font-size: 18px;
-        margin: 0 0 16px 0;
+        @include mixin.tablet{
+            font-size: vars.$fontsize-tablet;
+            padding-bottom: 5px;
+        }
     }
 }

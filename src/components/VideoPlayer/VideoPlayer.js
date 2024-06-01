@@ -14,7 +14,7 @@ function VideoPlayer({video}){
             </video>
             <div className="video-player__details">
                 <h1 className="video-player__title">{video.title}</h1>
-                <hr className="video-player__divider"></hr>
+                <hr className="video-player__divider video-player__divider--hide"></hr>
                 <div className="video-player__container">
                     <div className="video-player__subcontainer">
                         <p className="video-player__author">By {video.channel}</p>
