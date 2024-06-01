@@ -12,7 +12,13 @@
 
     @include mixin.tablet{
         flex-wrap: nowrap;
-        padding: 16px 36px;
+        padding: 16px vars.$padding-tablet;
+    }
+
+    @include mixin.desktop{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 16px vars.$padding-desktop;
     }
 
     &__logo-container{
@@ -21,6 +27,11 @@
         justify-content: center;
 
         @include mixin.tablet{
+            justify-content: flex-start;
+            width: 50%;
+        }
+
+        @include mixin.desktop{
             justify-content: flex-start;
             width: 50%;
         }
@@ -41,10 +52,15 @@
         align-items: center;
         order: 2;
         flex-grow: 1;
-        height: 36px;
+        height: 40px;
 
         @include mixin.tablet{
             max-width: 300px;
+        }
+
+        @include mixin.desktop{
+            max-width: 300px;
+            margin-left: auto;
         }
     }
     
@@ -72,11 +88,17 @@
             order: 2;
             width: 300px;
         }
+
+        @include mixin.desktop{
+            order: 2;
+            width: 300px;
+        }
     }
 
     &__avatar{
         display: flex;
         order: 3;
+        align-items: center;
 
         &-image{
             border-radius: 50%;
@@ -85,9 +107,23 @@
             height: 36px;
             object-fit: cover;
             object-position: 10% center;
+
+            @include mixin.tablet{
+                width: 40px;
+                height: 40px;
+            }
+
+            @include mixin.desktop{
+                width: 40px;
+                height: 40px;
+            }
         }
 
         @include mixin.tablet{
+            order: 4;
+        }
+
+        @include mixin.desktop{
             order: 4;
         }
     }
@@ -110,6 +146,11 @@
         }
 
         @include mixin.tablet{
+            order: 3;
+            max-width: 160px;
+        }
+
+        @include mixin.desktop{
             order: 3;
             max-width: 160px;
         }

@@ -2,7 +2,6 @@
 @use '../../styles/partials/mixins' as mixin;
 
 .video-player{
-
     &__video{
         width: 100%;
         margin-bottom: 24px;
@@ -12,124 +11,11 @@
             box-sizing: border-box;
             padding: 0 vars.$padding-tablet;
         }
-    }
 
-    &__details{
-        padding: 0 16px 16px 16px;
-
-        @include mixin.tablet{
-            padding: 0 vars.$padding-tablet;
-        }
-    }
-
-    &__title{
-        margin: 0;
-        font-size: 32px;
-        padding-bottom: 16px;
-
-        @include mixin.tablet{
-            padding-bottom: 0;
-        }
-    }
-
-    &__container{
-        display: flex;
-        gap: 40px;
-        align-items: center;
-        padding: 16px 0;
-
-        @include mixin.tablet{
-            justify-content: space-between;
-            padding-bottom: 0;
-        }
-    }
-
-    &__subcontainer{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        @include mixin.tablet{
-            flex-direction: row;
-            gap: 40px;
-        }
-    }
-
-    &__author{
-        margin: 0;
-        font-weight: bold;
-        font-size: 18px;
-
-        @include mixin.tablet{
-            font-size: 16px;
-        }
-    }
-
-    &__date{
-        margin: 0;
-        color: vars.$Silver;
-        font-size: vars.$fontsize-mobile;
-
-        @include mixin.tablet{
-            font-size: vars.$fontsize-tablet;
-        }
-    }
-
-    &__views-container{
-        display: flex;
-    }
-
-    &__likes-container{
-        display: flex;
-    }
-
-    &__views{
-        margin: 0;
-        color: vars.$Silver;
-        font-size: vars.$fontsize-mobile;
-
-        @include mixin.tablet{
-            font-size: vars.$fontsize-tablet;
-        }
-    }
-
-    &__likes{
-        margin: 0;
-        color: vars.$Silver;
-        font-size: vars.$fontsize-mobile;
-
-        @include mixin.tablet{
-            font-size: vars.$fontsize-tablet;
-        }
-    }
-
-    &__viewIcon{
-        padding-right: 5px;
-    }
-
-    &__likeIcon{
-        padding-right: 5px;
-    }
-
-    &__description{
-        font-size: vars.$fontsize-mobile;
-        margin-bottom: 0;
-
-        @include mixin.tablet{
-            padding: 16px 0;
-            font-size: vars.$fontsize-tablet;
-            line-height: 150%;
-        }
-    }
-
-    &__divider{
-        border: none;
-        border-top: 1px solid vars.$Mercury;
-
-        &--hide{
-            @include mixin.tablet{
-                display: none;
-            }
+        @include mixin.desktop{
+            box-sizing: border-box;
+            padding: 0 175px;
+            margin-bottom: 0;
         }
     }
 }

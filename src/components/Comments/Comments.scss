@@ -8,6 +8,10 @@
         padding: 0 vars.$padding-tablet;
     }
 
+    @include mixin.desktop{
+        padding: 0 20px 0 vars.$padding-desktop;
+    }
+
     &__header{
         margin: 0;
         padding: 16px 0 24px 0;
@@ -15,6 +19,10 @@
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
+        }
+
+        @include mixin.desktop{
+            font-size: vars.$fontsize-desktop;
         }
     }
 
@@ -30,6 +38,11 @@
             width: 40px;
             height: 40px;
         }
+
+        @include mixin.desktop{
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &__form-container{
@@ -37,6 +50,11 @@
         gap: 16px;
 
         @include mixin.tablet{
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        @include mixin.desktop{
             flex-wrap: nowrap;
             align-items: center;
         }
@@ -52,6 +70,12 @@
                 flex-wrap: nowrap;
                 align-items: center;
             }
+
+            @include mixin.desktop{
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
         }
 
         &--avatar{
@@ -60,7 +84,10 @@
 
             @include mixin.tablet{
                 margin-top: 0;
-            
+            }
+
+            @include mixin.desktop{
+                margin-top: 0;
             }
         }
     }
@@ -74,6 +101,11 @@
             justify-content: center;
             padding-bottom: 21px;
         }
+
+        @include mixin.desktop{
+            justify-content: center;
+            padding-bottom: 21px;
+        }
     }
 
     &__label{
@@ -83,6 +115,10 @@
 
         @include mixin.tablet{
             font-size: 14px;
+        }
+
+        @include mixin.desktop{
+            font-size: 12px;
         }
     }
 
@@ -104,10 +140,27 @@
             line-height: 8px;
             padding: 16px;
         }
+
+        @include mixin.desktop{
+            height: 40px;
+            box-sizing: border-box;
+            flex-grow: 1;
+            overflow: hidden;
+            line-height: 8px;
+            padding: 16px;
+        }
     
         &::placeholder{
             color: vars.$BrainFlix-Black;
             font-family: 'AvenirNextTLPro', sans-serif;
+
+            @include mixin.tablet{
+                font-size: 14px;
+            }
+
+            @include mixin.desktop{ 
+                font-size: 12px;
+            }
         }
 
         &:focus{
@@ -119,6 +172,10 @@
     &__divider{
         border: none;
         border-top: 1px solid vars.$Mercury;
+
+        @include mixin.desktop{
+            width: calc(100% + 20px);
+        }
     }
 
     &__comment-button{
@@ -137,6 +194,11 @@
         
         
         @include mixin.tablet{
+            max-width: 160px;
+            margin-bottom: 0;
+        }
+
+        @include mixin.desktop{
             max-width: 160px;
             margin-bottom: 0;
         }
@@ -176,11 +238,17 @@
             width: 40px;
             height: 40px;
         }
+
+        @include mixin.desktop{
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &__container{
         display: flex;
         flex-direction: column;
+        flex-grow: 1
     }
 
     &__subcontainer{
@@ -196,6 +264,11 @@
             font-size: vars.$fontsize-tablet;
             font-weight: 600;
         }
+
+        @include mixin.desktop{
+            font-size: vars.$fontsize-desktop;
+            font-weight: 600;
+        }
     }
 
     &__date{
@@ -204,6 +277,10 @@
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
         }
+
+        @include mixin.tablet{
+            font-size: vars.$fontsize-desktop;
+        }
     }
 
     &__comment{
@@ -211,6 +288,10 @@
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
+        }
+
+        @include mixin.desktop{
+            font-size: vars.$fontsize-desktop;
         }
     }
 }

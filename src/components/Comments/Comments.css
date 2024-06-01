@@ -6,6 +6,11 @@
     padding: 0 36px;
   }
 }
+@media (min-width: 1280px) {
+  .comments {
+    padding: 0 20px 0 120px;
+  }
+}
 .comments__header {
   margin: 0;
   padding: 16px 0 24px 0;
@@ -14,6 +19,11 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .comments__header {
     font-size: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__header {
+    font-size: 12px;
   }
 }
 .comments__profile-avatar {
@@ -32,11 +42,23 @@
     height: 40px;
   }
 }
+@media (min-width: 1280px) {
+  .comments__profile-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
 .comments__form-container {
   display: flex;
   gap: 16px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form-container {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+@media (min-width: 1280px) {
   .comments__form-container {
     flex-wrap: nowrap;
     align-items: center;
@@ -55,11 +77,23 @@
     align-items: center;
   }
 }
+@media (min-width: 1280px) {
+  .comments__form-container--addComments {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
 .comments__form-container--avatar {
   display: flex;
   margin-top: 24px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form-container--avatar {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1280px) {
   .comments__form-container--avatar {
     margin-top: 0;
   }
@@ -75,6 +109,12 @@
     padding-bottom: 21px;
   }
 }
+@media (min-width: 1280px) {
+  .comments__add-comments {
+    justify-content: center;
+    padding-bottom: 21px;
+  }
+}
 .comments__label {
   padding-bottom: 4px;
   color: #AFAFAF;
@@ -83,6 +123,11 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .comments__label {
     font-size: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__label {
+    font-size: 12px;
   }
 }
 .comments__textbox {
@@ -105,6 +150,16 @@
     padding: 16px;
   }
 }
+@media (min-width: 1280px) {
+  .comments__textbox {
+    height: 40px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    overflow: hidden;
+    line-height: 8px;
+    padding: 16px;
+  }
+}
 .comments__textbox::-moz-placeholder {
   color: #323232;
   font-family: "AvenirNextTLPro", sans-serif;
@@ -113,6 +168,22 @@
   color: #323232;
   font-family: "AvenirNextTLPro", sans-serif;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__textbox::-moz-placeholder {
+    font-size: 14px;
+  }
+  .comments__textbox::placeholder {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__textbox::-moz-placeholder {
+    font-size: 12px;
+  }
+  .comments__textbox::placeholder {
+    font-size: 12px;
+  }
+}
 .comments__textbox:focus {
   border: 2px solid;
   border-color: #0095FF;
@@ -120,6 +191,11 @@
 .comments__divider {
   border: none;
   border-top: 1px solid #E1E1E1;
+}
+@media (min-width: 1280px) {
+  .comments__divider {
+    width: calc(100% + 20px);
+  }
 }
 .comments__comment-button {
   display: flex;
@@ -136,6 +212,12 @@
   padding: 0 0 0 6px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .comments__comment-button {
+    max-width: 160px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
   .comments__comment-button {
     max-width: 160px;
     margin-bottom: 0;
@@ -173,9 +255,16 @@
     height: 40px;
   }
 }
+@media (min-width: 1280px) {
+  .comment__avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
 .comment__container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 .comment__subcontainer {
   display: flex;
@@ -191,6 +280,12 @@
     font-weight: 600;
   }
 }
+@media (min-width: 1280px) {
+  .comment__name, .comment__date {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
 .comment__date {
   color: #AFAFAF;
 }
@@ -199,11 +294,21 @@
     font-size: 16px;
   }
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comment__date {
+    font-size: 12px;
+  }
+}
 .comment__comment {
   font-size: 18px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .comment__comment {
     font-size: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__comment {
+    font-size: 12px;
   }
 }

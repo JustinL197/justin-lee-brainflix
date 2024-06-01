@@ -10,6 +10,12 @@
     gap: 36px;
   }
 }
+@media (min-width: 1280px) {
+  .video-list {
+    padding: 0 120px 0 16px;
+    gap: 16x;
+  }
+}
 .video-list__header {
   color: #AFAFAF;
   font-size: 18px;
@@ -19,6 +25,13 @@
   .video-list__header {
     font-size: 16px;
     margin: 24px 0 0 0;
+  }
+}
+@media (min-width: 1280px) {
+  .video-list__header {
+    font-size: 12px;
+    margin: 24px 0 0 0;
+    font-weight: 600;
   }
 }
 .video-list__item {
@@ -36,6 +49,12 @@
   .video-list__image {
     width: 140px;
     height: 80px;
+  }
+}
+@media (min-width: 1280px) {
+  .video-list__image {
+    max-width: 120px;
+    max-height: 60px;
   }
 }
 .video-list__details {
@@ -57,6 +76,12 @@
     padding-top: 5px;
   }
 }
+@media (min-width: 1280px) {
+  .video-list__title {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+}
 .video-list__channel {
   font-size: 18px;
   color: #323232;
@@ -66,6 +91,12 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-list__channel {
     font-size: 16px;
+    padding-bottom: 5px;
+  }
+}
+@media (min-width: 1280px) {
+  .video-list__channel {
+    font-size: 12px;
     padding-bottom: 5px;
   }
 }

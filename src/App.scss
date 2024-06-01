@@ -1,3 +1,6 @@
+@use '../src/styles/partials/variables' as vars;
+@use '../src/styles/partials/mixins' as mixin;
+
 //partials
 @import './styles/partials/font-type';
 @import './styles/partials/mixins';
@@ -10,3 +13,42 @@ body{
   margin: 0;
   font-family: 'AvenirNextTLPro', sans-serif;
 }
+
+.app{
+
+  &__content{
+    @include mixin.desktop{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__main{
+
+    @include mixin.desktop{
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid vars.$Mercury;
+      margin-right: 10px;
+    }
+  }
+
+  &__video-list{
+    @include mixin.desktop{
+      flex: 1;
+    }
+  }
+
+  &__divider{
+    display: none;
+
+    @include mixin.desktop{
+      display: block;
+      width: 1px;
+      background-color: vars.$Mercury;
+      height: calc(100% + 30px);
+    }
+  }
+}
+

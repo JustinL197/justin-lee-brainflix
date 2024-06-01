@@ -1,0 +1,171 @@
+@use '../../styles/partials/variables' as vars;
+@use '../../styles/partials/mixins' as mixin;
+
+.video-details{
+    padding: 0 16px 16px 16px;
+
+    @include mixin.tablet{
+        padding: 0 vars.$padding-tablet;
+    }
+
+    @include mixin.desktop{
+        padding: 0 20px 0 vars.$padding-desktop;
+    }
+    
+    &__title{
+        margin: 0;
+        font-size: 32px;
+        padding-bottom: 16px;
+    
+        @include mixin.tablet{
+            padding-bottom: 0;
+        }
+    
+        @include mixin.desktop{
+            padding-bottom: 0;
+            padding-top: 24px;
+        }
+    }
+    
+    &__container{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        padding: 16px 0;
+    
+        @include mixin.tablet{
+            justify-content: space-between;
+            padding-bottom: 0;
+        }
+    
+        @include mixin.desktop{
+            justify-content: space-between;
+            padding-bottom: 0;
+        }
+    }
+    
+    &__subcontainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+        @include mixin.tablet{
+            flex-direction: row;
+            gap: 40px;
+        }
+    
+        @include mixin.desktop{
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
+    
+    &__author{
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+    
+        @include mixin.tablet{
+            font-size: vars.$fontsize-tablet;
+        }
+    
+        @include mixin.desktop{
+            font-size: vars.$fontsize-desktop;
+        }
+    }
+    
+    &__date{
+        margin: 0;
+        color: vars.$Silver;
+        font-size: vars.$fontsize-mobile;
+    
+        @include mixin.tablet{
+            font-size: vars.$fontsize-tablet;
+        }
+    
+        @include mixin.desktop{
+            font-size: vars.$fontsize-desktop;
+        }
+    }
+    
+    &__views-container{
+        display: flex;
+    }
+    
+    &__likes-container{
+        display: flex;
+    }
+    
+    &__views{
+        margin: 0;
+        color: vars.$Silver;
+        font-size: vars.$fontsize-mobile;
+    
+        @include mixin.tablet{
+            font-size: vars.$fontsize-tablet;
+        }
+    
+        @include mixin.desktop{
+            font-size: vars.$fontsize-desktop;
+        }
+    }
+    
+    &__likes{
+        margin: 0;
+        color: vars.$Silver;
+        font-size: vars.$fontsize-mobile;
+    
+        @include mixin.tablet{
+            font-size: vars.$fontsize-tablet;
+        }
+    
+        @include mixin.desktop{
+            font-size: vars.$fontsize-desktop;
+        }
+    }
+    
+    &__viewIcon{
+        padding-right: 5px;
+    }
+    
+    &__likeIcon{
+        padding-right: 5px;
+    }
+    
+    &__description{
+        font-size: vars.$fontsize-mobile;
+        margin-bottom: 0;
+    
+        @include mixin.tablet{
+            padding: 16px 0;
+            font-size: vars.$fontsize-tablet;
+            line-height: 150%;
+        }
+    
+        @include mixin.desktop{
+            padding: 16px 0;
+            font-size: vars.$fontsize-desktop;
+            line-height: 150%;
+        }
+    }
+    
+    &__divider{
+        border: none;
+        border-top: 1px solid vars.$Mercury;
+
+        @include mixin.desktop{
+            width: calc(100% + 20px);
+        }
+    
+        &--hide{
+            @include mixin.tablet{
+                display: none;
+            }
+    
+            @include mixin.desktop{
+                display: none;
+            }
+        }
+    }
+    
+}

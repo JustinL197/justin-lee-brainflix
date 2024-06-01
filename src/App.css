@@ -28,12 +28,25 @@
     padding: 16px 36px;
   }
 }
+@media (min-width: 1280px) {
+  .header {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 16px 120px;
+  }
+}
 .header__logo-container {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .header__logo-container {
+    justify-content: flex-start;
+    width: 50%;
+  }
+}
+@media (min-width: 1280px) {
   .header__logo-container {
     justify-content: flex-start;
     width: 50%;
@@ -52,9 +65,14 @@
   align-items: center;
   order: 2;
   flex-grow: 1;
-  height: 36px;
+  height: 40px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .header__search-container {
+    max-width: 300px;
+  }
+}
+@media (min-width: 1280px) {
   .header__search-container {
     max-width: 300px;
   }
@@ -83,9 +101,16 @@
     width: 300px;
   }
 }
+@media (min-width: 1280px) {
+  .header__search {
+    order: 2;
+    width: 300px;
+  }
+}
 .header__avatar {
   display: flex;
   order: 3;
+  align-items: center;
 }
 .header__avatar-image {
   border-radius: 50%;
@@ -98,6 +123,23 @@
      object-position: 10% center;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .header__avatar-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 1280px) {
+  .header__avatar-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .header__avatar {
+    order: 4;
+  }
+}
+@media (min-width: 1280px) {
   .header__avatar {
     order: 4;
   }
@@ -124,6 +166,12 @@
     max-width: 160px;
   }
 }
+@media (min-width: 1280px) {
+  .header__upload-button {
+    order: 3;
+    max-width: 160px;
+  }
+}
 .header__text {
   flex: 1;
   position: absolute;
@@ -135,4 +183,36 @@
 body {
   margin: 0;
   font-family: "AvenirNextTLPro", sans-serif;
+}
+
+@media (min-width: 1280px) {
+  .app__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1280px) {
+  .app__main {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #E1E1E1;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .app__video-list {
+    flex: 1;
+  }
+}
+.app__divider {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .app__divider {
+    display: block;
+    width: 1px;
+    background-color: #E1E1E1;
+    height: calc(100% + 30px);
+  }
 }
