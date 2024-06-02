@@ -11,7 +11,7 @@ function Comments({comments}){
             <h2 className='comments__header'>{comments.length} Comments</h2>
             <div className='comments__form-container'>
                 <div className='comments__form-container--avatar'>
-                    <img src={commentAvatar} alt='profile avatar' className='comments__profile-avatar'></img>
+                    <img src={commentAvatar} alt='profile avatar' className='comments__profile-avatar' />
                 </div>
                 <div className='comments__form-container--addComments'>
                     <form className='comments__add-comments'>
