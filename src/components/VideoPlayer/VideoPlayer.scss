@@ -4,7 +4,7 @@
 .video-player{
     &__video{
         width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
         background-color: vars.$BrainFlix-DarkBlack;
 
         @include mixin.tablet{
@@ -14,7 +14,7 @@
 
         @include mixin.desktop{
             box-sizing: border-box;
-            padding: 0 175px;
+            padding: 0 10.938rem;
             margin-bottom: 0;
         }
     }

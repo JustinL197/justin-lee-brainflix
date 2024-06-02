@@ -5,31 +5,31 @@
     display: flex;
     flex-direction: column;
     padding: 0 vars.$padding-mobile vars.$padding-mobile vars.$padding-mobile;
-    gap: 16px;
+    gap: 1rem;
 
     @include mixin.tablet{
         padding: 0 vars.$padding-tablet vars.$padding-tablet vars.$padding-tablet;
-        gap: 36px;
+        gap: 2.25rem;
     }
 
     @include mixin.desktop{
-        padding: 0 vars.$padding-desktop 0 16px;
-        gap: 16x;
+        padding: 0 vars.$padding-desktop 3rem 1rem;
+        gap: 1rem;
     }
 
     &__header{
         color: vars.$Silver;
         font-size: vars.$fontsize-mobile;
-        margin: 0 0 16px 0;
+        margin: 0 0 1rem 0;
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
-            margin: 24px 0 0 0;
+            margin: 1.5rem 0 0 0;
         }
 
         @include mixin.desktop{
             font-size: vars.$fontsize-desktop;
-            margin: 24px 0 0 0;
+            margin: 1.5rem 0 0 0;
             font-weight: 600;
         }
     }
@@ -38,7 +38,7 @@
         display: flex;
         cursor: pointer;
         width: 100%;
-        gap: 16px;
+        gap: 1rem;
     }
 
     &__image{
@@ -66,36 +66,36 @@
     &__title{
         font-size: vars.$fontsize-mobile;
         font-weight: 700;
-        line-height: 20px;
+        line-height: 1.25rem;
         color: vars.$BrainFlix-Black;
-        padding-top: 10px;
+        padding-top: 0.625rem;
         margin: 0;
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
-            padding-top: 5px;
+            padding-top: 0.313rem;
         }
 
         @include mixin.desktop{
             font-size: vars.$fontsize-desktop;
-            padding-top: 5px;
+            padding-top: 0.313rem;
         }
     }
 
     &__channel{
         font-size: vars.$fontsize-mobile;
         color: vars.$BrainFlix-Black;
-        padding-bottom: 10px;
+        padding-bottom: 0.625rem;
         margin: 0;
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
-            padding-bottom: 5px;
+            padding-bottom: 0.313rem;
         }
 
         @include mixin.desktop{
             font-size: vars.$fontsize-desktop;
-            padding-bottom: 5px;
+            padding-bottom: 0.313rem;
         }
     }
 }

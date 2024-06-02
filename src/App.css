@@ -18,21 +18,21 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  padding: 16px 16px 24px 16px;
+  gap: 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
   flex-wrap: wrap;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .header {
     flex-wrap: nowrap;
-    padding: 16px 36px;
+    padding: 1rem 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .header {
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 16px 120px;
+    padding: 1rem 7.5rem;
   }
 }
 .header__logo-container {
@@ -60,7 +60,7 @@
 .header__search-container {
   display: flex;
   position: relative;
-  gap: 16px;
+  gap: 1rem;
   align-self: flex-start;
   align-items: center;
   order: 2;
@@ -75,16 +75,17 @@
 @media (min-width: 1280px) {
   .header__search-container {
     max-width: 300px;
+    margin-left: auto;
   }
 }
 .header__search-icon {
   position: absolute;
-  left: 10px;
+  left: 0.625rem;
 }
 .header__search {
   flex-grow: 1;
   outline: none;
-  padding: 12px 12px 12px 32px;
+  padding: 0.75rem 0.75rem 0.75rem 2rem;
   border: 1px solid;
   border-color: #E1E1E1;
   border-radius: 4px;
@@ -197,7 +198,7 @@ body {
     display: flex;
     flex-direction: column;
     border-right: 1px solid #E1E1E1;
-    margin-right: 10px;
+    margin-right: 0.625rem;
   }
 }
 @media (min-width: 1280px) {

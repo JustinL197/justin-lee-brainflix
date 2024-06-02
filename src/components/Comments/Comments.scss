@@ -2,19 +2,19 @@
 @use '../../styles/partials/mixins' as mixin;
 
 .comments{
-    padding: 0 16px 16px 16px;
+    padding: 0 vars.$padding-mobile vars.$padding-mobile vars.$padding-mobile;
 
     @include mixin.tablet{
         padding: 0 vars.$padding-tablet;
     }
 
     @include mixin.desktop{
-        padding: 0 20px 0 vars.$padding-desktop;
+        padding: 0 1.25rem 0 vars.$padding-desktop;
     }
 
     &__header{
         margin: 0;
-        padding: 16px 0 24px 0;
+        padding: vars.$padding-mobile 0 1.5rem 0;
         font-size: vars.$fontsize-mobile;
 
         @include mixin.tablet{
@@ -47,7 +47,7 @@
 
     &__form-container{
         display: flex;
-        gap: 16px;
+        gap: 1rem;
 
         @include mixin.tablet{
             flex-wrap: nowrap;
@@ -63,7 +63,7 @@
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            gap: 16px;
+            gap: 1rem;
 
             @include mixin.tablet{
                 flex-direction: row;
@@ -80,7 +80,7 @@
 
         &--avatar{
             display: flex;
-            margin-top: 24px;
+            margin-top: 1.5rem;
 
             @include mixin.tablet{
                 margin-top: 0;
@@ -99,26 +99,26 @@
 
         @include mixin.tablet{
             justify-content: center;
-            padding-bottom: 21px;
+            padding-bottom: 1.313rem;
         }
 
         @include mixin.desktop{
             justify-content: center;
-            padding-bottom: 21px;
+            padding-bottom: 1.313rem;
         }
     }
 
     &__label{
-        padding-bottom: 4px;
+        padding-bottom: 0.25rem;
         color: vars.$Silver;
         font-weight: 600;
 
         @include mixin.tablet{
-            font-size: 14px;
+            font-size: 0.875rem;
         }
 
         @include mixin.desktop{
-            font-size: 12px;
+            font-size: 0.75rem;
         }
     }
 
@@ -126,8 +126,8 @@
         height: 120px;
         border: 2px solid vars.$Mercury;
         border-radius: 6px;
-        padding: 12px;
-        font-size: 16px;
+        padding: 0.75rem;
+        font-size: 1rem;
         outline: none;
         box-sizing: border-box;
         resize: none;
@@ -137,8 +137,9 @@
             box-sizing: border-box;
             flex-grow: 1;
             overflow: hidden;
-            line-height: 8px;
-            padding: 16px;
+            line-height: 0.5rem;
+            padding: 1rem;
+            font-size: vars.$fontsize-tablet;
         }
 
         @include mixin.desktop{
@@ -146,8 +147,9 @@
             box-sizing: border-box;
             flex-grow: 1;
             overflow: hidden;
-            line-height: 8px;
-            padding: 16px;
+            line-height: 0.5rem;
+            padding: 1rem;
+            font-size: vars.$fontsize-desktop;
         }
     
         &::placeholder{
@@ -155,11 +157,11 @@
             font-family: 'AvenirNextTLPro', sans-serif;
 
             @include mixin.tablet{
-                font-size: 14px;
+                font-size: 0.875rem;
             }
 
             @include mixin.desktop{ 
-                font-size: 12px;
+                font-size: 0.75rem;
             }
         }
 
@@ -189,8 +191,8 @@
         border-radius: 4px;
         color: vars.$White;
         cursor: pointer;
-        margin-bottom: 16px;
-        padding: 0 0 0 6px;
+        margin-bottom: 1rem;
+        padding: 0 0 0 0.375rem;
         
         
         @include mixin.tablet{
@@ -209,7 +211,7 @@
     }
 
     &__comment-icon{
-       padding: 0 0 0 3px;
+       padding: 0 0 0 0.188rem;
     }
 
     &__button-text{
@@ -224,8 +226,8 @@
 
 .comment{
     display: flex;
-    padding-top: 10px;
-    gap: 16px;
+    padding-top: 0.625rem;
+    gap: 1rem;
 
     &__avatar{
         border-radius: 50%;
@@ -284,7 +286,7 @@
     }
 
     &__comment{
-        font-size: 18px;
+        font-size: vars.$fontsize-mobile;
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;

@@ -1,36 +1,36 @@
 .video-list {
   display: flex;
   flex-direction: column;
-  padding: 0 16px 16px 16px;
-  gap: 16px;
+  padding: 0 1rem 1rem 1rem;
+  gap: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-list {
-    padding: 0 36px 36px 36px;
-    gap: 36px;
+    padding: 0 2.25rem 2.25rem 2.25rem;
+    gap: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .video-list {
-    padding: 0 120px 0 16px;
-    gap: 16x;
+    padding: 0 7.5rem 3rem 1rem;
+    gap: 1rem;
   }
 }
 .video-list__header {
   color: #AFAFAF;
-  font-size: 18px;
-  margin: 0 0 16px 0;
+  font-size: 1.125rem;
+  margin: 0 0 1rem 0;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-list__header {
-    font-size: 16px;
-    margin: 24px 0 0 0;
+    font-size: 1rem;
+    margin: 1.5rem 0 0 0;
   }
 }
 @media (min-width: 1280px) {
   .video-list__header {
-    font-size: 12px;
-    margin: 24px 0 0 0;
+    font-size: 0.75rem;
+    margin: 1.5rem 0 0 0;
     font-weight: 600;
   }
 }
@@ -38,7 +38,7 @@
   display: flex;
   cursor: pointer;
   width: 100%;
-  gap: 16px;
+  gap: 1rem;
 }
 .video-list__image {
   width: 150x;
@@ -63,40 +63,40 @@
   justify-content: space-between;
 }
 .video-list__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.25rem;
   color: #323232;
-  padding-top: 10px;
+  padding-top: 0.625rem;
   margin: 0;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-list__title {
-    font-size: 16px;
-    padding-top: 5px;
+    font-size: 1rem;
+    padding-top: 0.313rem;
   }
 }
 @media (min-width: 1280px) {
   .video-list__title {
-    font-size: 12px;
-    padding-top: 5px;
+    font-size: 0.75rem;
+    padding-top: 0.313rem;
   }
 }
 .video-list__channel {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #323232;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   margin: 0;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-list__channel {
-    font-size: 16px;
-    padding-bottom: 5px;
+    font-size: 1rem;
+    padding-bottom: 0.313rem;
   }
 }
 @media (min-width: 1280px) {
   .video-list__channel {
-    font-size: 12px;
-    padding-bottom: 5px;
+    font-size: 0.75rem;
+    padding-bottom: 0.313rem;
   }
 }

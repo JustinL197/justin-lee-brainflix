@@ -2,16 +2,10 @@ import React from 'react';
 import './Comments.scss';
 import commentIcon from '../../assets/images/icons/add_comment.svg';
 import commentAvatar from '../../assets/images/Mohan-muruge.jpg';
+import { getDynamicTime } from '../../assets/util/util';
 
 
 function Comments({comments}){
-    function convertDate(timestamp){
-        const date = new Date(timestamp);
-        const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-
-        return formattedDate;
-
-    }
     return(
         <div className='comments'>
             <h2 className='comments__header'>{comments.length} Comments</h2>
@@ -39,7 +33,7 @@ function Comments({comments}){
                     <div className='comment__container'>
                         <div className='comment__subcontainer'>
                             <h3 className='comment__name'>{comment.name}</h3>
-                            <p className='comment__date'>{convertDate(comment.timestamp)}</p>
+                            <p className='comment__date'>{getDynamicTime(comment.timestamp)}</p>
                         </div>
                         <p className='comment__comment'>{comment.comment}</p>
                     </div>

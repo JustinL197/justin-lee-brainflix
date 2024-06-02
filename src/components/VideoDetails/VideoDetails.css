@@ -1,20 +1,20 @@
 .video-details {
-  padding: 0 16px 16px 16px;
+  padding: 0 1rem 1rem 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .video-details {
-    padding: 0 20px 0 120px;
+    padding: 0 1.25rem 0 7.5rem;
   }
 }
 .video-details__title {
   margin: 0;
-  font-size: 32px;
-  padding-bottom: 16px;
+  font-size: 2rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__title {
@@ -24,14 +24,14 @@
 @media (min-width: 1280px) {
   .video-details__title {
     padding-bottom: 0;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 .video-details__container {
   display: flex;
-  gap: 40px;
+  gap: 2.5rem;
   align-items: center;
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__container {
@@ -48,48 +48,48 @@
 .video-details__subcontainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__subcontainer {
     flex-direction: row;
-    gap: 40px;
+    gap: 2.5rem;
   }
 }
 @media (min-width: 1280px) {
   .video-details__subcontainer {
     flex-direction: row;
-    gap: 40px;
+    gap: 2.5rem;
   }
 }
 .video-details__author {
   margin: 0;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__author {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1280px) {
   .video-details__author {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .video-details__date {
   margin: 0;
   color: #AFAFAF;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__date {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1280px) {
   .video-details__date {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .video-details__views-container {
@@ -101,54 +101,54 @@
 .video-details__views {
   margin: 0;
   color: #AFAFAF;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__views {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1280px) {
   .video-details__views {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .video-details__likes {
   margin: 0;
   color: #AFAFAF;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__likes {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1280px) {
   .video-details__likes {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .video-details__viewIcon {
-  padding-right: 5px;
+  padding-right: 0.313rem;
 }
 .video-details__likeIcon {
-  padding-right: 5px;
+  padding-right: 0.313rem;
 }
 .video-details__description {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 0;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .video-details__description {
-    padding: 16px 0;
-    font-size: 16px;
+    padding: 1rem 0;
+    font-size: 1rem;
     line-height: 150%;
   }
 }
 @media (min-width: 1280px) {
   .video-details__description {
-    padding: 16px 0;
-    font-size: 12px;
+    padding: 1rem 0;
+    font-size: 0.75rem;
     line-height: 150%;
   }
 }

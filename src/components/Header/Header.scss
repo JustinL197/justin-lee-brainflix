@@ -6,19 +6,19 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    padding: 16px 16px 24px 16px;
+    gap: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     flex-wrap: wrap;
 
     @include mixin.tablet{
         flex-wrap: nowrap;
-        padding: 16px vars.$padding-tablet;
+        padding: 1rem vars.$padding-tablet;
     }
 
     @include mixin.desktop{
         justify-content: space-between;
         flex-wrap: nowrap;
-        padding: 16px vars.$padding-desktop;
+        padding: 1rem vars.$padding-desktop;
     }
 
     &__logo-container{
@@ -47,7 +47,7 @@
     &__search-container{
         display: flex;
         position: relative;
-        gap: 16px;
+        gap: 1rem;
         align-self: flex-start;
         align-items: center;
         order: 2;
@@ -66,13 +66,13 @@
     
     &__search-icon{
         position: absolute;
-        left: 10px;
+        left: 0.625rem;
     }
 
     &__search{
         flex-grow: 1;
         outline: none;
-        padding: 12px 12px 12px 32px;
+        padding: 0.75rem 0.75rem 0.75rem 2rem;
         border: 1px solid;
         border-color: vars.$Mercury;
         border-radius: 4px;
