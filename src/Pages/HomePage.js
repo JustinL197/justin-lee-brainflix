@@ -16,7 +16,6 @@ function HomePage() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  //simulating fetching data from APIs
   useEffect(() => {
     const getVideos = async () => {
       try{
@@ -26,7 +25,7 @@ function HomePage() {
           const video = await fetchVideoById(videos[0].id);
           setCurrentVideo(video);
         }
-    } catch(error){
+      } catch(error){
       setError('Failed to load videos');
     }
   };
@@ -38,6 +37,7 @@ function HomePage() {
     try{
       const video = await fetchVideoById(videoId);
       setCurrentVideo(video);
+      navigate(`/video/${videoId}`, {state: {videoList, video}});
     } catch(error){
       setError('Failed to fetch video details');
     }
