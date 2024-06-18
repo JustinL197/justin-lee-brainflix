@@ -3,6 +3,11 @@ import './VideoList.scss';
 
 function VideoList({videos, onVideoSelect, currentVideoId}) {
     const filteredList = videos.filter(video => video.id !== currentVideoId);
+
+    if (!videos){
+        return <div>Loading...</div>;
+    }
+    
     return (
         <div className="video-list">
             <h2 className="video-list__header">NEXT VIDEOS</h2>
