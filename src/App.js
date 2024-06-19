@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './Pages/HomePage';
-import UploadPage from './Pages/UploadPage';
-import VideoDetailsPage from './Pages/VideoDetailsPage';
+import HomePage from './pages/HomePage';
+import UploadPage from './pages/UploadPage/UploadPage';
+import VideoDetailsPage from './pages/VideoDetailsPage';
 import "./App.scss";
 
 function App() {

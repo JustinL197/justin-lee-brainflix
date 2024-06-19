@@ -1,0 +1,42 @@
+@use '../../styles/partials/variables' as vars;
+@use '../../styles/partials/mixins' as mixin;
+
+//partials
+@import '../../styles/partials/font-type';
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+//component styles
+@import '../../components/Header/Header.scss';
+
+body{
+    margin: 0;
+    font-family: 'AvenirNextTLPro', sans-serif;
+}
+
+.upload{
+    &__heading{
+        padding: 0 vars.$padding-mobile;
+    }
+
+    &__container{
+        padding: 0 vars.$padding-mobile;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__thumbnail{
+        width: 100%;
+    }
+
+    &__form-title{
+        padding-bottom: 0.25rem;
+        color: vars.$Silver;
+        font-weight: 600;
+    }
+}
