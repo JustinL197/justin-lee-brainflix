@@ -39,6 +39,7 @@
   cursor: pointer;
   width: 100%;
   gap: 1rem;
+  text-decoration: none;
 }
 .video-list__image {
   width: 150x;

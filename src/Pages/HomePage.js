@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
 import { fetchVideos, fetchVideoById } from '../assets/util/api';
 import Header from '../components/Header/Header'
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer';
@@ -14,7 +13,7 @@ function HomePage() {
   const [videoList, setVideoList] = useState([]);
   const [currentVideo, setCurrentVideo] = useState(null);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     const getVideos = async () => {
@@ -29,20 +28,10 @@ function HomePage() {
       setError('Failed to load videos');
     }
   };
-
+  
     getVideos();
   }, []);
     
-  const setSelectedVideo = async(videoId) => {
-    try{
-      const video = await fetchVideoById(videoId);
-      setCurrentVideo(video);
-      navigate(`/video/${videoId}`, {state: {videoList, video}});
-    } catch(error){
-      setError('Failed to fetch video details');
-    }
-  };
-
   return (
     <div className="App">
       <Header />
@@ -58,7 +47,7 @@ function HomePage() {
           )}
         </div>
         <div className='app__video-list'>
-          <VideoList videos={videoList} onVideoSelect={setSelectedVideo} currentVideoId={currentVideo?.id}/>
+          <VideoList videos={videoList} currentVideoId={currentVideo?.id}/>
         </div>
       </main>
     </div>

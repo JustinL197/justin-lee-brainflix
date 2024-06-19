@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import { fetchVideoById } from '../assets/util/api';
+import { useParams } from 'react-router-dom';
+import { fetchVideoById, fetchVideos} from '../assets/util/api';
 import Header from '../components/Header/Header';
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer';
 import Comments from '../components/Comments/Comments';
@@ -10,11 +10,8 @@ import '../App.scss';
 
 function VideoDetailsPage(){
     const { id } = useParams();
-    const location = useLocation();
-    const navigate = useNavigate();
-    const {videoList, video: initialVideo } = location.state || {};
-    console.log(videoList);
-    const [video, setVideo] = useState(initialVideo || null);
+    const [video, setVideo] = useState(null);
+    const [videoList, setVideoList] = useState([]);
     const [error, setError] = useState(null);
    
     useEffect(() => {
@@ -26,19 +23,20 @@ function VideoDetailsPage(){
                 setError('Unable to load video content');
             }
         };
+
+        const getVideoList = async() => {
+            try{
+                const videos = await fetchVideos();
+                setVideoList(videos);
+            } catch(error) {
+                setError('Unable to load video list');
+            }
+        };
+
         getVideo();
-    }, [id, initialVideo]);
+        getVideoList();
 
-
-    const setSelectedVideo = async (videoId) => {
-        try{
-            const selectedVideo = await fetchVideoById(videoId);
-            setVideo(selectedVideo);
-            navigate(`/video/${videoId}`, {state: {videoList, video: selectedVideo}});
-        } catch (error){
-            setError('Unable to load video content');
-        }
-    }
+    }, [id]);
 
     return (
         <div className="App">
@@ -55,7 +53,7 @@ function VideoDetailsPage(){
               )}
             </div>
             <div className='app__video-list'>
-                <VideoList videos={videoList} onVideoSelect={setSelectedVideo} currentVideoId={video?.id}/>
+                <VideoList videos={videoList} currentVideoId={video?.id}/>
             </div>
           </main>
         </div>
