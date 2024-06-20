@@ -37,7 +37,7 @@ function UploadPage(){
             <h1 className="upload__heading">Upload Video</h1>
             <hr className="upload__divider"></hr>
             <form className="upload__form" onSubmit={handleSubmit}>
-                <div className="upload__container">
+                <div className={"upload__container upload__container--thumbnail"}>
                     <label htmlFor="thumbnail" className="upload__form-label">VIDEO THUMBNAIL</label>
                     <img 
                         src={thumbnailImage} 
@@ -46,7 +46,7 @@ function UploadPage(){
                         id="thumbnail" 
                     />
                 </div>
-                <div className="upload__container">
+                <div className={"upload__container upload__container--inputs"}>
                     <label htmlFor="title" className="upload__form-label">TITLE YOUR VIDEO</label>
                     <input
                         type="text"
@@ -68,7 +68,7 @@ function UploadPage(){
                         required
                     />
                 </div>
-                <hr className="upload__divider"></hr>
+                <hr className={"upload__divider upload__divider--form"}></hr>
                 <div className={`upload__container upload__container--buttons`}>
                     <button className="upload__publish-button" type="submit">
                         <img src={publishIcon} alt='publish icon' className="upload__publish-icon"/>
@@ -82,6 +82,7 @@ function UploadPage(){
                     </Link>
                 </div>
             </form>
+            <hr className={"upload__divider--last"}></hr>
         </div>
     )
 }
