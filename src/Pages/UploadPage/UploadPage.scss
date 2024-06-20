@@ -17,26 +17,164 @@ body{
 .upload{
     &__heading{
         padding: 0 vars.$padding-mobile;
+
+        @include mixin.tablet{
+            padding: 0 vars.$padding-tablet;
+        }
+    }
+
+    &__divider{
+        visibility: hidden;
+
+        @include mixin.tablet{
+            margin: 0 36px 24px 36px;
+            visibility: visible;
+            border: none;
+            border-top: 1px solid vars.$Mercury;
+        }
     }
 
     &__container{
         padding: 0 vars.$padding-mobile;
         display: flex;
         flex-direction: column;
+
+        @include mixin.tablet{
+            padding: 0 vars.$padding-tablet;
+        }
+
+        &--buttons{
+            @include mixin.tablet{
+                flex-direction: row;
+                justify-content: flex-end;
+                max-width: 100%;
+                margin-left: auto;
+                
+            }
+        }
     }
 
     &__form{
         display: flex;
         flex-direction: column;
+        gap: 16px;
+    }
+
+    &__form-label{
+        color: vars.$Silver;
+        font-weight: 600;
+        padding-bottom: 0.25rem;
+        font-size: 12px;
+
+        @include mixin.tablet{
+            font-size: 14px;
+        }
     }
 
     &__thumbnail{
         width: 100%;
+
+        @include mixin.tablet{
+            width: 50%;
+        }
     }
 
-    &__form-title{
-        padding-bottom: 0.25rem;
-        color: vars.$Silver;
+    &__form-input{
+        font-family: inherit;
+        margin-bottom: 16px;
+        outline: none;
+        padding: 0.75rem;
+        border-radius: 4px;
+        border: 1px solid vars.$Mercury;
+
+        &:focus{
+            border: 2px solid;
+            border-color: vars.$BrainFlix-Blue;
+        }
+
+        &::placeholder{
+            color: black;
+
+            @include mixin.tablet{
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__form-textarea{
+        font-family: inherit;
+        height: 80px;
+        outline: none;
+        padding: 0.75rem;
+        border-radius: 4px;
+        border: 1px solid vars.$Mercury;
+
+        @include mixin.tablet{
+            margin-bottom: 16px;
+        }
+        &:focus{
+            border: 2px solid;
+            border-color: vars.$BrainFlix-Blue;
+        }
+
+        &::placeholder{
+            color: black;
+
+            @include mixin.tablet{
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__publish-button{
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border: 0;
+        background-color: vars.$BrainFlix-Blue;
+        border-radius: 4px;
+        color: vars.$White;
+        cursor: pointer;
+        margin-bottom: 24px;
+
+        @include mixin.tablet{
+            order: 2;
+            flex-grow: 1;
+            width: 160px;
+        }
+
+        &:hover{
+            background-color: vars.$BrainFlix-DarkBlue;
+        }
+    }
+
+    &__text{
+        flex: 1;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
         font-weight: 600;
+    }
+    
+
+    &__cancel-button{
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border: 0;
+        background-color: white;
+        border-radius: 4px;
+        color: vars.$BrainFlix-Blue;
+        cursor: pointer;
+
+        @include mixin.tablet{
+            order: 1;
+            flex-grow: 1;
+            width: 160px;
+        }
     }
 }

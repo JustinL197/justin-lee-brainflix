@@ -34,7 +34,8 @@ function UploadPage(){
     return(
         <div className="upload">
             <Header />
-            <h1 className="upload__heading">Upload Page</h1>
+            <h1 className="upload__heading">Upload Video</h1>
+            <hr className="upload__divider"></hr>
             <form className="upload__form" onSubmit={handleSubmit}>
                 <div className="upload__container">
                     <label htmlFor="thumbnail" className="upload__form-label">VIDEO THUMBNAIL</label>
@@ -46,7 +47,7 @@ function UploadPage(){
                     />
                 </div>
                 <div className="upload__container">
-                    <label htmlFor="title" className="upload__form-title">TITLE YOUR VIDEO</label>
+                    <label htmlFor="title" className="upload__form-label">TITLE YOUR VIDEO</label>
                     <input
                         type="text"
                         id="title"
@@ -57,7 +58,7 @@ function UploadPage(){
                         required
                     />
 
-                    <label htmlFor="description" className="upload__form-description">ADD A DESCIRPTION TO YOUR VIDEO</label>
+                    <label htmlFor="description" className="upload__form-label">ADD A VIDEO DESCRIPTION</label>
                     <textarea
                         id="description"
                         className="upload__form-textarea"
@@ -67,7 +68,8 @@ function UploadPage(){
                         required
                     />
                 </div>
-                <div className="upload__container">
+                <hr className="upload__divider"></hr>
+                <div className={`upload__container upload__container--buttons`}>
                     <button className="upload__publish-button" type="submit">
                         <img src={publishIcon} alt='publish icon' className="upload__publish-icon"/>
                         <span className="upload__text">PUBLISH</span>
