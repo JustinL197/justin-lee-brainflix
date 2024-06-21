@@ -100,7 +100,7 @@ body{
         }
 
         &--inputs{
-            
+
             @include mixin.desktop{
                 width: 33%;
                 flex-grow: 1;
@@ -273,4 +273,8 @@ body{
             width: 160px;
         }
     }
+}
+
+.invalid{
+    border: 2px solid #D22D2D;
 }

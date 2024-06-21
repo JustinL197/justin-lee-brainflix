@@ -461,3 +461,7 @@ body {
     width: 160px;
   }
 }
+
+.invalid {
+  border: 2px solid #D22D2D;
+}

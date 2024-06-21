@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import thumbnailImage from '../../assets/images/Upload-video-preview.jpg';
@@ -12,6 +12,7 @@ function UploadPage(){
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
     
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
@@ -23,8 +24,12 @@ function UploadPage(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert('Upload was successful');
-        navigate('/');
+        setIsSubmitted(true);
+
+        if (title && description) {
+            alert('Upload was successful');
+            navigate('/');
+        }
     };
 
     const handleCancel = (event) => {
@@ -51,21 +56,20 @@ function UploadPage(){
                     <input
                         type="text"
                         id="title"
-                        className="upload__form-input"
+                        className={`upload__form-input ${isSubmitted && !title ? 'invalid' : ''}`}
                         placeholder="Add a title to your video"
                         value={title}
                         onChange={handleTitleChange}
-                        required
                     />
 
                     <label htmlFor="description" className="upload__form-label">ADD A VIDEO DESCRIPTION</label>
                     <textarea
                         id="description"
-                        className="upload__form-textarea"
+                        className={`upload__form-textarea ${isSubmitted && !description ? 'invalid': ''}`}
                         placeholder="Add a description to your video"
                         value={description}
                         onChange={handleDescriptionChange}
-                        required
+
                     />
                 </div>
                 <hr className={"upload__divider upload__divider--form"}></hr>
