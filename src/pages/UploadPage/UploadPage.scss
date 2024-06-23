@@ -32,14 +32,14 @@ body{
         visibility: hidden;
 
         @include mixin.tablet{
-            margin: 0 36px 24px 36px;
+            margin: 0 2.25rem 1.5rem 2.25rem;
             visibility: visible;
             border: none;
             border-top: 1px solid vars.$Mercury;
         }
 
         @include mixin.desktop{
-            margin: 0 120px 24px 120px;
+            margin: 0 7.5rem 1.5rem 7.5rem;
             visibility: visible;
             border-top: 1px solid vars.$Mercury;
         }
@@ -57,7 +57,7 @@ body{
 
             @include mixin.desktop{
                 visibility: visible;
-                margin: 0 120px 24px 120px;
+                margin: 0 7.5rem 1.5rem 7.5rem;
                 visibility: visible;
                 border-top: 1px solid vars.$Mercury;
                 margin-top: -90px;
@@ -93,7 +93,7 @@ body{
                 width: 100%;
                 justify-content: flex-end;
                 margin-left: auto;
-                margin-top: 50px;
+                margin-top: 3.125rem;
                 padding-right: 0;
                 flex-grow: 0;
             }
@@ -104,7 +104,7 @@ body{
             @include mixin.desktop{
                 width: 33%;
                 flex-grow: 1;
-                padding-left: 24px;
+                padding-left: 1.5rem;
                 padding-right: 0;
             }
         }
@@ -120,7 +120,7 @@ body{
     &__form{
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 1rem;
 
         @include mixin.desktop{
             gap: 0;
@@ -136,14 +136,14 @@ body{
         color: vars.$Silver;
         font-weight: 600;
         padding-bottom: 0.25rem;
-        font-size: 12px;
+        font-size: 0.75rem;
 
         @include mixin.tablet{
-            font-size: 14px;
+            font-size: 0.875rem;
         }
 
         @include mixin.desktop{
-            font-size: 14px;
+            font-size: 0.875rem;
         }
     }
 
@@ -162,7 +162,7 @@ body{
 
     &__form-input{
         font-family: inherit;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
         outline: none;
         padding: 0.75rem;
         border-radius: 4px;
@@ -177,7 +177,7 @@ body{
             color: black;
 
             @include mixin.tablet{
-                font-size: 14px;
+                font-size: 0.875rem;
             }
         }
     }
@@ -207,7 +207,7 @@ body{
             color: black;
 
             @include mixin.tablet{
-                font-size: 14px;
+                font-size: 0.875rem;
             }
         }
     }
@@ -223,7 +223,7 @@ body{
         border-radius: 4px;
         color: vars.$White;
         cursor: pointer;
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
 
         @include mixin.tablet{
             order: 2;
@@ -246,7 +246,7 @@ body{
         left: 50%;
         transform: translatex(-50%);
         font-weight: 600;
-        padding-top: 3px;
+        padding-top: 0.188rem;
     }
     
 

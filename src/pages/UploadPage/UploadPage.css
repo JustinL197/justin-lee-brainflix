@@ -212,7 +212,7 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .upload__divider {
-    margin: 0 36px 24px 36px;
+    margin: 0 2.25rem 1.5rem 2.25rem;
     visibility: visible;
     border: none;
     border-top: 1px solid #E1E1E1;
@@ -220,7 +220,7 @@ body {
 }
 @media (min-width: 1280px) {
   .upload__divider {
-    margin: 0 120px 24px 120px;
+    margin: 0 7.5rem 1.5rem 7.5rem;
     visibility: visible;
     border-top: 1px solid #E1E1E1;
   }
@@ -238,7 +238,7 @@ body {
 @media (min-width: 1280px) {
   .upload__divider--last {
     visibility: visible;
-    margin: 0 120px 24px 120px;
+    margin: 0 7.5rem 1.5rem 7.5rem;
     visibility: visible;
     border-top: 1px solid #E1E1E1;
     margin-top: -90px;
@@ -274,7 +274,7 @@ body {
     width: 100%;
     justify-content: flex-end;
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 3.125rem;
     padding-right: 0;
     flex-grow: 0;
   }
@@ -283,7 +283,7 @@ body {
   .upload__container--inputs {
     width: 33%;
     flex-grow: 1;
-    padding-left: 24px;
+    padding-left: 1.5rem;
     padding-right: 0;
   }
 }
@@ -296,7 +296,7 @@ body {
 .upload__form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 @media (min-width: 1280px) {
   .upload__form {
@@ -311,16 +311,16 @@ body {
   color: #AFAFAF;
   font-weight: 600;
   padding-bottom: 0.25rem;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .upload__form-label {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 1280px) {
   .upload__form-label {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .upload__thumbnail {
@@ -339,7 +339,7 @@ body {
 }
 .upload__form-input {
   font-family: inherit;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   outline: none;
   padding: 0.75rem;
   border-radius: 4px;
@@ -357,10 +357,10 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .upload__form-input::-moz-placeholder {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .upload__form-input::placeholder {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .upload__form-textarea {
@@ -393,10 +393,10 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .upload__form-textarea::-moz-placeholder {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .upload__form-textarea::placeholder {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .upload__publish-button {
@@ -410,7 +410,7 @@ body {
   border-radius: 4px;
   color: #FFFFFF;
   cursor: pointer;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .upload__publish-button {
@@ -434,7 +434,7 @@ body {
   left: 50%;
   transform: translatex(-50%);
   font-weight: 600;
-  padding-top: 3px;
+  padding-top: 0.188rem;
 }
 .upload__cancel-button {
   display: flex;

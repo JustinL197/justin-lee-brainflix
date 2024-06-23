@@ -19,12 +19,12 @@
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
-            margin: 0 0 24px 0;
+            margin: 0 0 1.5rem 0;
         }
 
         @include mixin.desktop{
             font-size: vars.$fontsize-desktop;
-            margin: 0 0 24px 0;
+            margin: 0 0 1.5rem 0;
         }
     }
 
@@ -55,15 +55,15 @@
             flex-wrap: nowrap;
             align-items: stretch;
             position: relative;
-            padding: 12px 0;
+            padding: 0.75rem 0;
         }
 
         @include mixin.desktop{
             flex-wrap: nowrap;
             align-items: stretch;
             position: relative;
-            padding: 12px 0;
-            gap: 36px;
+            padding: 0.75rem 0;
+            gap: 2.25rem;
         }
 
         &__avatar{
@@ -155,7 +155,7 @@
         outline: none;
         box-sizing: border-box;
         resize: none;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
 
         @include mixin.tablet{
             height: 40px;
@@ -165,7 +165,7 @@
             padding: 1rem;
             font-size: vars.$fontsize-tablet;
             width: 100%;
-            margin: 0 16px 0 0;
+            margin: 0 1rem 0 0;
         }
 
         @include mixin.desktop{
@@ -176,7 +176,7 @@
             line-height: 0.5rem;
             padding: 1rem;
             font-size: vars.$fontsize-desktop;
-            margin: 0 36px 0 0;
+            margin: 0 2.25rem 0 0;
         }
     
         &::placeholder{
@@ -260,7 +260,7 @@
     gap: 1rem;
 
     @include mixin.desktop{
-        gap: 36px;
+        gap: 2.25rem;
     }
 
     &__avatar{
