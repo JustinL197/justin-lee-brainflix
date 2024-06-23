@@ -38,6 +38,11 @@ function VideoDetailsPage(){
 
     }, [id]);
 
+    const handleCommentChange = async () => {
+      const updatedVideo = await fetchVideoById(id);
+      setVideo(updatedVideo);
+    }
+
     return (
         <div className="App">
           <Header />
@@ -48,7 +53,11 @@ function VideoDetailsPage(){
               {video && (
                 <>
                 <VideoDetails video={video} />
-                <Comments comments={video.comments} />
+                <Comments 
+                comments={video.comments}
+                currentVideoId={video.id}
+                onCommentsChange={handleCommentChange} 
+                />
                 </>
               )}
             </div>

@@ -19,10 +19,12 @@
 
         @include mixin.tablet{
             font-size: vars.$fontsize-tablet;
+            margin: 0 0 24px 0;
         }
 
         @include mixin.desktop{
             font-size: vars.$fontsize-desktop;
+            margin: 0 0 24px 0;
         }
     }
 
@@ -51,34 +53,20 @@
 
         @include mixin.tablet{
             flex-wrap: nowrap;
-            align-items: center;
+            align-items: stretch;
+            position: relative;
+            padding: 12px 0;
         }
 
         @include mixin.desktop{
             flex-wrap: nowrap;
-            align-items: center;
+            align-items: stretch;
+            position: relative;
+            padding: 12px 0;
+            gap: 36px;
         }
 
-        &--addComments{
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            gap: 1rem;
-
-            @include mixin.tablet{
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-            }
-
-            @include mixin.desktop{
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-            }
-        }
-
-        &--avatar{
+        &__avatar{
             display: flex;
             margin-top: 1.5rem;
 
@@ -92,19 +80,51 @@
         }
     }
 
+    &__add-comments-container{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 1rem;
+
+        @include mixin.tablet{
+            flex-direction: row;
+            align-items: center;
+            flex-grow: 1;
+            padding: 0;
+            width: 100%;
+        }
+
+        @include mixin.desktop{
+            flex-direction: row;
+            align-items: center;
+            flex-grow: 1;
+            padding: 0;
+            width: 100%;
+        }
+    }
+
     &__add-comments{
         flex-grow: 2;
         display: flex;
         flex-direction: column;
+        resize: none;
 
         @include mixin.tablet{
-            justify-content: center;
+            flex-direction: row;
+            align-items: center;
             padding-bottom: 1.313rem;
+            flex-wrap: nowrap;
+            padding: 0;
+            width: 100%;
         }
 
         @include mixin.desktop{
-            justify-content: center;
+            flex-direction: row;
+            align-items: center;
             padding-bottom: 1.313rem;
+            flex-wrap: nowrap;
+            padding: 0;
+            width: 100%;
         }
     }
 
@@ -115,10 +135,14 @@
 
         @include mixin.tablet{
             font-size: 0.875rem;
+            position: absolute;
+            top: -20px;
         }
 
         @include mixin.desktop{
             font-size: 0.75rem;
+            position: absolute;
+            top: -20px;
         }
     }
 
@@ -131,15 +155,17 @@
         outline: none;
         box-sizing: border-box;
         resize: none;
+        margin-bottom: 16px;
 
         @include mixin.tablet{
             height: 40px;
-            box-sizing: border-box;
             flex-grow: 1;
             overflow: hidden;
             line-height: 0.5rem;
             padding: 1rem;
             font-size: vars.$fontsize-tablet;
+            width: 100%;
+            margin: 0 16px 0 0;
         }
 
         @include mixin.desktop{
@@ -150,6 +176,7 @@
             line-height: 0.5rem;
             padding: 1rem;
             font-size: vars.$fontsize-desktop;
+            margin: 0 36px 0 0;
         }
     
         &::placeholder{
@@ -169,16 +196,8 @@
             border: 2px solid;
             border-color: vars.$BrainFlix-Blue;
         }
-    }
+    }  
 
-    &__divider{
-        border: none;
-        border-top: 1px solid vars.$Mercury;
-
-        @include mixin.desktop{
-            width: calc(100% + 20px);
-        }
-    }
 
     &__comment-button{
         display: flex;
@@ -197,21 +216,19 @@
         
         @include mixin.tablet{
             max-width: 160px;
-            margin-bottom: 0;
+            margin: 0;
+            flex-grow: 1;
         }
 
         @include mixin.desktop{
             max-width: 160px;
-            margin-bottom: 0;
+            margin:0;
+            flex-grow: 1;
         }
 
         &:hover{
             background-color: vars.$BrainFlix-DarkBlue;
         }
-    }
-
-    &__comment-icon{
-       padding: 0 0 0 0.188rem;
     }
 
     &__button-text{
@@ -221,6 +238,19 @@
         transform: translatex(-47%);
         font-weight: 600;
     }
+
+    &__divider{
+        border: none;
+        border-top: 1px solid vars.$Mercury;
+
+        @include mixin.desktop{
+            width: calc(100% + 20px);
+        }
+    }
+
+    &__comment-icon{
+       padding: 0 0 0 0.188rem;
+    }
 }
 
 
@@ -228,6 +258,10 @@
     display: flex;
     padding-top: 0.625rem;
     gap: 1rem;
+
+    @include mixin.desktop{
+        gap: 36px;
+    }
 
     &__avatar{
         border-radius: 50%;
@@ -296,4 +330,13 @@
             font-size: vars.$fontsize-desktop;
         }
     }
+
+    &__delete{
+        margin-left: auto;
+    }
+}
+
+
+.invalid{
+    border: 2px solid #D22D2D;
 }

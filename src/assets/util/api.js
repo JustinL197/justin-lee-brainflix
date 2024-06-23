@@ -28,3 +28,25 @@ export const fetchVideoById = async (videoId) => {
         console.error("Error fetching video:", error);
     }
 };
+
+export const postComment = async (videoId, commentData) => {
+    try{
+        const response = await brainFlixAPI.post(`videos/${videoId}/comments`, commentData, {
+            params: {api_key: API_KEY}
+        });
+        return response.data
+    }catch(error){
+        console.error("Error posting comment", error);
+    }
+}
+
+export const deleteComment = async (videoId, commentId) => {
+    try{
+        const response = await brainFlixAPI.delete(`/videos/${videoId}/comments/${commentId}`, {
+            params: {api_key: API_KEY}
+    });
+    return response.data;
+    }catch(error){
+        console.error("Error deleting comment", error)
+    }
+};

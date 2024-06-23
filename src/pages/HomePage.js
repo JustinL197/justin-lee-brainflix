@@ -28,10 +28,17 @@ function HomePage() {
       setError('Failed to load videos');
     }
   };
-  
     getVideos();
   }, []);
-    
+
+
+    const handleCommentChange = async () => {
+      if (currentVideo){
+        const updatedVideo = await fetchVideoById(currentVideo.id);
+        setCurrentVideo(updatedVideo);
+      }
+    };
+
   return (
     <div className="App">
       <Header />
@@ -42,7 +49,10 @@ function HomePage() {
           {currentVideo && (
             <>
             <VideoDetails video={currentVideo} />
-            <Comments comments={currentVideo.comments} />
+            <Comments 
+            comments={currentVideo.comments} 
+            currentVideoId={currentVideo?.id}
+            onCommentsChange={handleCommentChange} />
             </>
           )}
         </div>
