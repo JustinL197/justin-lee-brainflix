@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import thumbnailImage from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/images/icons/publish.svg';
 import './UploadPage.scss';
+import { postVideo } from "../../assets/util/api";
 
 function UploadPage(){
 
@@ -22,13 +23,22 @@ function UploadPage(){
         setDescription(event.target.value);
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         setIsSubmitted(true);
 
+        const newVideo = {
+            title,
+            description
+        };
+
         if (title && description) {
-            alert('Upload was successful');
-            navigate('/');
+            try{
+                await postVideo(newVideo)
+                navigate('/');
+            }catch(error){
+                console.log("error posting video");
+            }
         }
     };
 
@@ -74,7 +84,7 @@ function UploadPage(){
                 </div>
                 <hr className={"upload__divider upload__divider--form"}></hr>
                 <div className={`upload__container upload__container--buttons`}>
-                    <button className="upload__publish-button" type="submit">
+                    <button className="upload__publish-button" type="submit" onClick={handleSubmit}>
                         <img src={publishIcon} alt='publish icon' className="upload__publish-icon"/>
                         <span className="upload__text">PUBLISH</span>
                     </button>

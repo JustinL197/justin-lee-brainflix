@@ -50,3 +50,12 @@ export const deleteComment = async (videoId, commentId) => {
         console.error("Error deleting comment", error)
     }
 };
+
+export const postVideo = async(newVideo) => {
+    try{
+        const response = await axios.post('http://localhost:8080/videos', newVideo)
+        return response.data;
+    }catch(error){
+        console.error("Error posting video");
+    }
+};
