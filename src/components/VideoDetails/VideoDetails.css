@@ -110,6 +110,7 @@
 }
 @media (min-width: 1280px) {
   .video-details__views {
+    padding-top: 0.188rem;
     font-size: 0.75rem;
   }
 }
@@ -125,6 +126,7 @@
 }
 @media (min-width: 1280px) {
   .video-details__likes {
+    padding-top: 0.188rem;
     font-size: 0.75rem;
   }
 }

@@ -3,15 +3,15 @@ import axios from 'axios';
 const API_URL = `https://unit-3-project-api-0a5620414506.herokuapp.com/`;
 const API_KEY = `c6a768e0-9b26-4b75-9a29-a6eb0fb52d46`;
 
+const API_URL_1 = 'http://localhost:8080';
+
 const brainFlixAPI = axios.create({
-    baseURL: API_URL,
+    baseURL: API_URL_1,
 });
 
 export const fetchVideos = async () => {
     try{
-        const response = await brainFlixAPI.get(`/videos`, {
-            params: {api_key: API_KEY}
-        });
+        const response = await brainFlixAPI.get(`/videos`);
         return response.data;
     }catch(error){
         console.error("Error fetching videos:", error);
@@ -20,9 +20,7 @@ export const fetchVideos = async () => {
 
 export const fetchVideoById = async (videoId) => {
     try{
-        const response = await brainFlixAPI.get(`/videos/${videoId}`, {
-            params: {api_key: API_KEY}
-        });
+        const response = await brainFlixAPI.get(`/videos/${videoId}`);
         return response.data;
     }catch(error){
         console.error("Error fetching video:", error);
@@ -53,7 +51,7 @@ export const deleteComment = async (videoId, commentId) => {
 
 export const postVideo = async(newVideo) => {
     try{
-        const response = await axios.post('http://localhost:8080/videos', newVideo)
+        const response = await brainFlixAPI.post('/videos', newVideo)
         return response.data;
     }catch(error){
         console.error("Error posting video");

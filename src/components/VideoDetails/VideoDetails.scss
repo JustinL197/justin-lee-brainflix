@@ -106,6 +106,7 @@
         }
     
         @include mixin.desktop{
+            padding-top: 0.188rem;
             font-size: vars.$fontsize-desktop;
         }
     }
@@ -120,6 +121,7 @@
         }
     
         @include mixin.desktop{
+            padding-top: 0.188rem;
             font-size: vars.$fontsize-desktop;
         }
     }
