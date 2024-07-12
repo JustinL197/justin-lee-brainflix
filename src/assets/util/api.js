@@ -1,12 +1,9 @@
 import axios from 'axios';
 
-const API_URL = `https://unit-3-project-api-0a5620414506.herokuapp.com/`;
-const API_KEY = `c6a768e0-9b26-4b75-9a29-a6eb0fb52d46`;
-
-const API_URL_1 = 'http://localhost:8080';
+const API_URL = 'http://localhost:8080';
 
 const brainFlixAPI = axios.create({
-    baseURL: API_URL_1,
+    baseURL: API_URL,
 });
 
 export const fetchVideos = async () => {
@@ -21,6 +18,7 @@ export const fetchVideos = async () => {
 export const fetchVideoById = async (videoId) => {
     try{
         const response = await brainFlixAPI.get(`/videos/${videoId}`);
+        console.log("Fetched video (with comments):", response.data);
         return response.data;
     }catch(error){
         console.error("Error fetching video:", error);
@@ -29,9 +27,7 @@ export const fetchVideoById = async (videoId) => {
 
 export const postComment = async (videoId, commentData) => {
     try{
-        const response = await brainFlixAPI.post(`videos/${videoId}/comments`, commentData, {
-            params: {api_key: API_KEY}
-        });
+        const response = await brainFlixAPI.post(`videos/${videoId}/comments`, commentData);
         return response.data
     }catch(error){
         console.error("Error posting comment", error);
@@ -40,10 +36,8 @@ export const postComment = async (videoId, commentData) => {
 
 export const deleteComment = async (videoId, commentId) => {
     try{
-        const response = await brainFlixAPI.delete(`/videos/${videoId}/comments/${commentId}`, {
-            params: {api_key: API_KEY}
-    });
-    return response.data;
+        const response = await brainFlixAPI.delete(`/videos/${videoId}/comments/${commentId}`);
+        return response.data;
     }catch(error){
         console.error("Error deleting comment", error)
     }

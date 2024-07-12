@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState }  from 'react';
+import { useState, useEffect }  from 'react';
 import './Comments.scss';
 import commentIcon from '../../assets/images/icons/add_comment.svg';
 import commentAvatar from '../../assets/images/Mohan-muruge.jpg';
@@ -14,6 +14,11 @@ function Comments({comments, currentVideoId, onCommentsChange}){
     const [newComment, setNewComment] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
 
+    useEffect(() => {
+        console.log('Comments component received new comments prop:', comments); // Log to verify re-render and prop update
+    }, [comments]);
+
+
     const handleAddComment = async (event) => {
         event.preventDefault();
         setIsSubmitted(true);
@@ -24,7 +29,8 @@ function Comments({comments, currentVideoId, onCommentsChange}){
                 comment: newComment
             };
             if (newComment){
-                await postComment(currentVideoId, commentData);
+                const response = await postComment(currentVideoId, commentData);
+                console.log("posted comment:", response);
                 setNewComment('');
                 onCommentsChange();
                 setIsSubmitted(false);
@@ -53,7 +59,7 @@ function Comments({comments, currentVideoId, onCommentsChange}){
                 </div>
                 <div className='comments__add-comments-container'>
                     <form className='comments__add-comments' onSubmit={handleAddComment}>
-                        <label for='comments' className='comments__label'>JOIN THE CONVERSATION</label>
+                        <label htmlFor='comments' className='comments__label'>JOIN THE CONVERSATION</label>
                         <textarea 
                         id='comments' 
                         name='comments' 

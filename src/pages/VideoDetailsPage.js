@@ -39,7 +39,9 @@ function VideoDetailsPage(){
     }, [id]);
 
     const handleCommentChange = async () => {
+      console.log('handleCommentChange called');
       const updatedVideo = await fetchVideoById(id);
+      console.log("updated video data after fetching", updatedVideo);
       setVideo(updatedVideo);
     }
 
