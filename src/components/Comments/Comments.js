@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect }  from 'react';
+import { useState }  from 'react';
 import './Comments.scss';
 import commentIcon from '../../assets/images/icons/add_comment.svg';
 import commentAvatar from '../../assets/images/Mohan-muruge.jpg';
@@ -13,11 +13,6 @@ function Comments({comments, currentVideoId, onCommentsChange}){
 
     const [newComment, setNewComment] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
-
-    useEffect(() => {
-        console.log('Comments component received new comments prop:', comments); // Log to verify re-render and prop update
-    }, [comments]);
-
 
     const handleAddComment = async (event) => {
         event.preventDefault();

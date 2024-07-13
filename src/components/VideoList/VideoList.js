@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import './VideoList.scss';
 
 function VideoList({videos, currentVideoId}) {
+    if (!videos || videos.length === 0){
+        return <div> No videos available</div>
+    }
+    
     const filteredList = videos.filter(video => video.id !== currentVideoId);
 
     return (

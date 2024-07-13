@@ -39,11 +39,13 @@ function VideoDetailsPage(){
     }, [id]);
 
     const handleCommentChange = async () => {
-      console.log('handleCommentChange called');
       const updatedVideo = await fetchVideoById(id);
-      console.log("updated video data after fetching", updatedVideo);
       setVideo(updatedVideo);
     }
+
+    const handleVideoUpdate = (updatedVideo) => {
+      setVideo(prevVideo => ({...prevVideo, likes: updatedVideo.likes}));
+    };
 
     return (
         <div className="App">
@@ -54,7 +56,7 @@ function VideoDetailsPage(){
             <div className='app__main'>
               {video && (
                 <>
-                <VideoDetails video={video} />
+                <VideoDetails video={video} onVideoUpdate={handleVideoUpdate}/>
                 <Comments 
                 comments={video.comments}
                 currentVideoId={video.id}

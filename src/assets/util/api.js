@@ -18,7 +18,6 @@ export const fetchVideos = async () => {
 export const fetchVideoById = async (videoId) => {
     try{
         const response = await brainFlixAPI.get(`/videos/${videoId}`);
-        console.log("Fetched video (with comments):", response.data);
         return response.data;
     }catch(error){
         console.error("Error fetching video:", error);
@@ -51,3 +50,13 @@ export const postVideo = async(newVideo) => {
         console.error("Error posting video");
     }
 };
+
+export const likeVideo = async(videoId) => {
+    try{
+        await brainFlixAPI.put(`/videos/${videoId}/likes`);
+        const response = await brainFlixAPI.get(`/videos/${videoId}`);
+        return response.data;
+    }catch(error){
+        console.error("Error incrementing like");
+    }
+}

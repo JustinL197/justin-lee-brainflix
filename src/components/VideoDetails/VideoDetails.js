@@ -2,11 +2,21 @@ import React from 'react';
 import './VideoDetails.scss';
 import viewIcon from '../../assets/images/icons/views.svg';
 import likeIcon from '../../assets/images/icons/likes.svg';
+import { likeVideo } from '../../assets/util/api';
 
-function VideoDetails ({video}){
+function VideoDetails ({video, onVideoUpdate}){
 
     const date = new Date(video.timestamp);
     const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+
+    const handleLikes = async () => {
+        try{
+            const updatedVideo = await likeVideo(video.id);
+            onVideoUpdate(updatedVideo);
+        }catch(error){
+            console.error("error updating likes");
+        }
+    };
 
     return (
         <div className="video-details">
@@ -23,7 +33,12 @@ function VideoDetails ({video}){
                         <p className="video-details__views">{video.views}</p>
                     </div>
                     <div className="video-details__likes-container">
-                        <img src={likeIcon} alt="total likes" className='video-details__likeIcon'/>
+                        <img 
+                        src={likeIcon} 
+                        alt="total likes" 
+                        onClick={handleLikes}
+                        style={{cursor: 'pointer'}}
+                        className='video-details__likeIcon'/>
                         <p className="video-details__likes">{video.likes}</p>                             
                     </div>
                 </div>
