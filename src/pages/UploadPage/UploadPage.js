@@ -14,7 +14,7 @@ function UploadPage(){
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
-    
+
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
     };
@@ -79,7 +79,6 @@ function UploadPage(){
                         placeholder="Add a description to your video"
                         value={description}
                         onChange={handleDescriptionChange}
-
                     />
                 </div>
                 <hr className={"upload__divider upload__divider--form"}></hr>
